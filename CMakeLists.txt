@@ -9,6 +9,11 @@
 # (4) To install either "make install" or "make install DESTDIR=<your directory>"
 # (5) Need to include changes in include/log4cpp/Portability.hh for OSX to build
 
+IF (BIICODE)
+  INCLUDE ( biicode.cmake )
+  RETURN()
+ENDIF (BIICODE)
+
 PROJECT ( LOG4CPP )
 
 INCLUDE_DIRECTORIES ( include )
